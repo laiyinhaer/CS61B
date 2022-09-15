@@ -47,7 +47,7 @@ public class NBody {
 
     }
 
-    public static double ReadRadius(String s){
+    public static double readRadius(String s){
         In in = new In(s);
         int number = in.readInt();
         double radius = in.readDouble();
