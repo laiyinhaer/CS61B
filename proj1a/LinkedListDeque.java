@@ -126,7 +126,7 @@ public class LinkedListDeque<T> {
 
 
     private T getRecursiveHelp(int index, Node start) {
-        if (index == 0){
+        if (index == 0) {
             return start.item;
         }
         return getRecursiveHelp(index - 1, start.next);
