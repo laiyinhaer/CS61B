@@ -2,7 +2,7 @@ public class LinkedListDeque<T> {
     /**
      * inner class Node
      */
-    public class Node {
+    pravite class Node {
         public T item;
         public Node prev;
         public Node next;
@@ -136,7 +136,7 @@ public class LinkedListDeque<T> {
     }
 
 
-    public T getRecursiveHelp(int index, Node start) {
+    private T getRecursiveHelp(int index, Node start) {
         if (index == 0)
             return start.item;
         return getRecursiveHelp(index - 1, start.next);
