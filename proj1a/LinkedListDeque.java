@@ -1,8 +1,6 @@
 public class LinkedListDeque<T> {
-    /**
-     * inner class Node
-     */
-    pravite class Node {
+    /** inner class Node*/
+    private class Node {
         public T item;
         public Node prev;
         public Node next;
@@ -39,8 +37,6 @@ public class LinkedListDeque<T> {
 
     /**
      * Adds an item of type T to the front of the deque.
-     *
-     * @param item
      */
     public void addFirst(T item) {
         Node temp = new Node(item, sentinel, sentinel.next);
@@ -51,8 +47,6 @@ public class LinkedListDeque<T> {
 
     /**
      * Adds an item of type T to the back of the deque.
-     *
-     * @param item
      */
     public void addLast(T item) {
         Node temp = new Node(item, sentinel.prev, sentinel);
@@ -63,8 +57,6 @@ public class LinkedListDeque<T> {
 
     /**
      * Returns true if deque is empty, false otherwise.
-     *
-     * @return
      */
     public boolean isEmpty() {
         if (sentinel.next == sentinel)
@@ -85,8 +77,6 @@ public class LinkedListDeque<T> {
 
     /**
      * Removes and returns the item at the front of the deque. If no such item exists, returns null.
-     *
-     * @return
      */
     public T removeFirst() {
         if (isEmpty())
@@ -100,8 +90,6 @@ public class LinkedListDeque<T> {
 
     /**
      * Removes and returns the item at the back of the deque. If no such item exists, returns null.
-     *
-     * @return
      */
     public T removeLast() {
         if (isEmpty())
@@ -111,7 +99,6 @@ public class LinkedListDeque<T> {
         sentinel.prev = last.prev;
         size -= 1;
         return last.item;
-
     }
 
     /**
@@ -127,7 +114,6 @@ public class LinkedListDeque<T> {
         return p.item;
     }
 
-
     /**
      * Same as get, but uses recursion.
      */
@@ -141,5 +127,4 @@ public class LinkedListDeque<T> {
             return start.item;
         return getRecursiveHelp(index - 1, start.next);
     }
-
 }
